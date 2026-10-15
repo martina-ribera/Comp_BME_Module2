@@ -114,12 +114,6 @@ plt.title("Fat-fraction distributions")
 plt.legend()
 plt.show()
 
-results_df = pd.DataFrame([{
-    "timepoint": row["timepoint"],
-    "mean_fat_fraction_percent": np.mean(muscle_values),
-    "min_fat_fraction_percent": np.min(muscle_values),
-    "max_fat_fraction_percent": np.max(muscle_values)
-}])
 output_file = Path("TA_fat_fraction_summary.csv")
 results_df.to_csv(output_file, index=False)
 print(f"Saved {output_file}")
